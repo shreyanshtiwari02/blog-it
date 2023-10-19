@@ -3,6 +3,10 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
+const {
+    checkForAuthenticationCookie,
+  } = require("./middlewares/authentication");
+
 const PORT = 8000;
 
 mongoose
