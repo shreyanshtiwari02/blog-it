@@ -2,6 +2,14 @@ const express = require("express");
 
 const app = express();
 const mongoose = require("mongoose");
+
+const cookiePaser = require("cookie-parser");
+
+const Blog = require("./models/blog");
+
+const userRoute = require("./routes/user");
+const blogRoute = require("./routes/blog");
+
 const path = require("path");
 const {
     checkForAuthenticationCookie,
@@ -28,6 +36,9 @@ app.get("/", async (req, res) => {
     blogs: allBlogs,
   });
 });
+
+app.use("/user", userRoute);
+app.use("/blog", blogRoute);
 
 app.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));
 
