@@ -11,14 +11,19 @@ mongoose
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
+app.use(express.urlencoded({ extended: false }));
+app.use(cookiePaser());
+app.use(checkForAuthenticationCookie("token"));
+app.use(express.static(path.resolve("./public")));
 
+app.get("/", async (req, res) => {
+  const allBlogs = await Blog.find({});
+  console.log(req.user);
+  res.render("home", {
+    user: req.user,
+    blogs: allBlogs,
+  });
+});
 
-app.get('/',(req,res)=>{
-
-
-    return res.json({
-        name : "shrey"
-    });
-})
 app.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));
 
