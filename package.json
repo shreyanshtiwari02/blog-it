@@ -1,7 +1,7 @@
 {
   "name": "blog-it",
   "version": "1.0.0",
-  "description": "a blog app for tech creators",
+  "description": "a blog app for creators",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
