@@ -3,7 +3,7 @@
   data-bs-theme="dark"
 >
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Blogify</a>
+    <a class="navbar-brand" href="#">Blogit</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -33,7 +33,7 @@
             aria-expanded="false"
           >
            
-            <%= user.role %>
+            <%= user.email.slice(0,5) %>
             
           </a>
           <ul class="dropdown-menu">
