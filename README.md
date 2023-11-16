@@ -9,7 +9,7 @@
 ##Signup
 ![image](https://github.com/shreyanshtiwari02/blog-it/assets/81490172/7966c68a-7d76-4d81-95d6-d876d3946958)
 
-## Signin Page
+##Signin Page
 ![image](https://github.com/shreyanshtiwari02/blog-it/assets/81490172/68e6761d-cbc1-4eea-a790-74f0fa7657a4)
 
 ##Homepage after uploading a Blog
